@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ececec;
+}
+
+
+nav {
+  background-color: #f0f1f2;
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
+ul li {
+    display: inline-block;
+    padding: 0px 350px;
+}
+
+.titulo h1{
+  color: #000000;
+  font-family: league spartan;
+  font-weight: 600;
+  font-size: 32px;
+  margin-left: 20px;
+  background-color: #f0f1f2;
+}
+
+#btn-menu{
+  display: none;
+}
+
+.container-menu{
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+  opacity: 1;
+  visibility: visible;
+}
+.cont-menu{
+  width: 100%;
+  max-width: 250px;
+  background: #A9BF04;
+  height: 100vh;
+  position: relative;
+  transition: all 500ms ease;
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+  transform: translateX(0%);
+}
+.cont-menu nav{
+  transform: translateY(50%);
+}
+.cont-menu nav a{
+  display: block;
+  text-decoration: none;
+  font-family: poppins;
+  padding: 20px;
+  color: #50590A;
+  border-left: 5px solid transparent;
+  transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+  border-left: 5px solid #c7c7c7;
+  background: #222602;
+}
+.cont-menu label{
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
